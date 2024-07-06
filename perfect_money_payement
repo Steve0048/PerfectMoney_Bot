@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Money Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="submit"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+        input[type="text"] {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+        input[type="submit"] {
+            background: #ff6b6b;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        input[type="submit"]:hover {
+            background: #ff4757;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Form</h1>
+        <form action="https://perfectmoney.com/api/step1.asp" method="POST">
+            <input type="hidden" name="PAYEE_ACCOUNT" value="U43777394">
+            <input type="hidden" name="PAYEE_NAME" value="NTI">
+            <input type="hidden" name="PAYMENT_ID" value="NTI deposit payment">
+            <label for="amount">Payment Amount (USD):</label>
+            <input type="text" id="amount" name="PAYMENT_AMOUNT" value=""><br>
+            <input type="hidden" name="PAYMENT_UNITS" value="USD">
+            <input type="hidden" name="STATUS_URL" value="achikaalex@gmail.com">
+            <input type="hidden" name="PAYMENT_URL" value="https://form.jotform.com/241574574574062">
+            <input type="hidden" name="PAYMENT_URL_METHOD" value="LINK">
+            <input type="hidden" name="NOPAYMENT_URL" value="https://form.jotform.com/241574771836567">
+            <input type="hidden" name="NOPAYMENT_URL_METHOD" value="LINK">
+            <input type="hidden" name="SUGGESTED_MEMO" value="">
+            <input type="hidden" name="BAGGAGE_FIELDS" value="">
+            <input type="submit" name="PAYMENT_METHOD" value="Pay Now!">
+        </form>
+    </div>
+</body>
+</html>
